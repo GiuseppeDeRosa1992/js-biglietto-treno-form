@@ -7,14 +7,14 @@ const kmToTravel = document.getElementById("km");
 
 const ageUser = document.getElementById("age");
 
-const priceTicket = kmRate * kmToTravel.value
-console.log(`Prezzo base del biglietto: ${priceTicket}`);
-
 const date = document.getElementById("send-date");
 date.addEventListener ("click", function() {
     console.log("quanti km fa?", kmToTravel.value)
     console.log("quanti anni ha?", ageUser.value)
 }) 
+
+const priceTicket = kmRate * kmToTravel.value
+console.log(`Prezzo base del biglietto: ${priceTicket}`);
 
 //Se l'utente è minorenne
 if (ageUser.value <18) {
