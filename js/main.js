@@ -3,7 +3,7 @@ const kmRate = 0.21;
 console.log(`Tariffa fissa per km: ${kmRate}`);
 
 // Stringa
-string = "Il prezzo base è:"
+string = "Il prezzo del biglietto è:"
 stringJunior = "Il prezzo scontato per i minorenni è:"
 stringSenior = "Il prezzo scontato per i senior è:"
 
@@ -36,7 +36,12 @@ else if (ageUser.value >65) {
     document.getElementById("result-senior").innerHTML = stringSenior + " " + priceSeniorToFixed;
 }
 
+const numberPlace = ageUser.value * 1.2;
+numberPlaceToFixed = numberPlace.toFixed()
+
 document.getElementById("result").innerHTML = string + " " + priceTicketToFixed
+document.getElementById("number-place").innerHTML = `"Il suo posto è il n. ${numberPlaceToFixed}"`;
+document.getElementById("train-carriage").innerHTML = "La sua carrozza è la n. 13"
 }) 
 
 
