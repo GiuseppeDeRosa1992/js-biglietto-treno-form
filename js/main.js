@@ -3,9 +3,9 @@ const kmRate = 0.21;
 console.log(`Tariffa fissa per km: ${kmRate}`);
 
 // Stringa
-string = "Il prezzo del biglietto è:"
-stringJunior = "Il prezzo scontato per i minorenni è:"
-stringSenior = "Il prezzo scontato per i senior è:"
+string = "Il prezzo del Biglietto è:"
+stringJunior = "Il prezzo scontato per i Junior è:"
+stringSenior = "Il prezzo scontato per i Senior è:"
 
 // CHIEDO ALL'UTENTE NOME KM DA PERCORRERE E ETA' TRAMITE INPUT
 const nameUser = document.getElementById("username");
@@ -59,8 +59,12 @@ date.addEventListener("submit", function (eventIntercetted) {
     // document.getElementById("name-user").innerHTML = nameFinal;
     document.getElementById("name-user").innerHTML = userNameValue;
     document.getElementById("result").innerHTML = string + " " + "€" + priceTicketToFixed;
-    document.getElementById("number-place").innerHTML = "Il suo posto è il n:" + numberPlaceRandom;
-    document.getElementById("train-carriage").innerHTML = "La sua carrozza è la n:" + trainCurriageRandom;
+    document.getElementById("number-place").innerHTML = "Il suo Posto è il n:" + numberPlaceRandom;
+    document.getElementById("train-carriage").innerHTML = "La sua Carrozza è la n:" + trainCurriageRandom;
+
+    //QRCODE
+    new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+
 })
 
 
