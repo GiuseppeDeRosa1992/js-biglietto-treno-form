@@ -17,29 +17,58 @@
 <body>
 
     <main>
-        <h1 class="bg-success py-2 text-center m-0">Calcola il prezzo del biglietto</h1>
-        <form>
-            <div class="text-center bg-primary p-2">
-                <div class="my-1">
-                    <label for="km">Quanti km deve percorrere?</label>
+        <div class="container">
+            <!-- BARRA VERDE CON BORDER TOP -->
+            <div class="py-3 bg-success rounded-top-3"></div>
+            <h1 class="py-2 text-center m-0">Calcola il prezzo del biglietto</h1>
+            <form>
+                <div class="row m-0">
+                    <div class="col-12 col-sm-4 p-0 text-center">
+                        <div class="py-2">
+                            <label class="py-1" for="username">Nome e Cognome</label>
+                            <div>
+                                <input class="w-75" name="username" id="username" type="text"
+                                    placeholder="Inserisci il tuo Nome" required min="2" max="110">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 p-0 text-center">
+                        <div class="py-2">
+                            <label class="py-1" for="km">Km da Percorrere?</label>
+                            <div>
+                                <input class="w-75" name="kilometer" id="km" type="number"
+                                    placeholder="Km da Percorrere" required min="5" max="1500">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 p-0 text-center">
+                        <div class="py-2">
+                            <label class="py-1" for="age">Età</label>
+                            <div>
+                                <input class="w-75" name="age-user" id="age" type="number"
+                                    placeholder="Quanti anni hai?" required min="10" max="110">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0 py-2 text-center">
+                        <button id="send-date" class="btn btn-outline-success">Calcola Biglietto</button>
+                    </div>
                 </div>
-                <input name="kilometer" id="km" type="number" required min="5" max="1500">
-                <div class="my-1">
-                    <label for="age">Quanti anni ha?</label>
-                </div>
-                <input name="age-user" id="age" type="number" required min="10" max="110">
-                <div class="my-3">
-                    <button id="send-date">INVIA I DATI</button>
-                </div>
+            </form>
+            <!-- BARRA VERDE SENZA BORDO SMUSSATO -->
+            <div class="py-3 bg-success"></div>
+            <div class="p-2">
+                <h2 class="m-0 p-0 py-2 text-center">Il tuo Biglietto</h2>
+                <hr>
+                <h2 id="name-user"></h2>
+                <h6 id="result"></h6>
+                <h6 id="result-junior"></h6>
+                <h6 id="result-senior"></h6>
+                <h6 id="number-place"></h6>
+                <h6 id="train-carriage"></h6>
             </div>
-        </form>
-        <div class="bg-warning p-2 text-center">
-            <h2 id="name-user"></h2>
-            <p id="number-place"></p>
-            <p id="train-carriage"></p>
-            <p id="result"></p>
-            <p id="result-junior"></p>
-            <p id="result-senior"></p>
+            <!-- BARRA VERDE CON BORDER BOTTOM -->
+            <div class="py-3 bg-success rounded-bottom-3"></div>
         </div>
     </main>
 
